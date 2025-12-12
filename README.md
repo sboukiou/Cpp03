@@ -1,3 +1,3 @@
-# Cpp Module 03 - Inhiretance
+# Cpp Module 03 - Inheritance
 
 
