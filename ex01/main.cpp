@@ -1,17 +1,15 @@
 #include <iostream>
-#include "./ClapTrap.hpp"
+#include "./ScavTrap.hpp"
 
 
 int main(void) {
 	std::cout <<  "------------------\n";
-	ClapTrap	User0;
+	ScavTrap	User0;
 	std::string u1 = "User1";
 	std::cout <<  "------------------\n";
-	ClapTrap	User1(u1);
 	std::cout <<  "------------------\n";
-	ClapTrap	User2(User0);
+	ScavTrap	User2(User0);
 	std::cout <<  "------------------\n";
-	ClapTrap	User3 = User1;
 	std::cout <<  "------------------\n";
 
 	User0.setName("User 0");
@@ -23,7 +21,6 @@ int main(void) {
 	User0.takeDamage(5);
 	User0.beRepaired(3);
 	std::cout <<  "------------------\n";
-	User3 = User0;
 	std::cout <<  "------------------\n";
 	std::cout << "User0  " << User0.getName() << std::endl;
 	std::cout << "User0  " << User0.getHitPoints() << std::endl;
