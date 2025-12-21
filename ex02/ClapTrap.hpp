@@ -1,3 +1,6 @@
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+
 #include <iostream>
 
 
@@ -10,21 +13,23 @@ class ClapTrap {
 
 	public:
 		ClapTrap();
-		ClapTrap(std::string &name);
-		ClapTrap(ClapTrap	&other);
-		ClapTrap	&operator=(ClapTrap &other);
+		ClapTrap(const std::string &name);
+		ClapTrap(const ClapTrap	&other);
+		ClapTrap	&operator=(const ClapTrap &other);
 		~ClapTrap();
 		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void	takeDamage(const unsigned int &amount);
+		void	beRepaired(const unsigned int &amount);
 
 		std::string		getName(void) const;
 		unsigned int	getHitPoints(void) const;
 		unsigned int	getEnergyPoints(void) const;
 		unsigned int	getAttackDamage(void) const;
-		void			setName(const std::string param);
-		void			setHitPoints(const unsigned int param);
-		void			setEnergyPoints(const unsigned int param);
-		void			setAttackDamage(const unsigned int param);
+		void			setName(const std::string &param);
+		void			setHitPoints(const unsigned int &param);
+		void			setEnergyPoints(const unsigned int &param);
+		void			setAttackDamage(const unsigned int &param);
 
 };
+
+#endif

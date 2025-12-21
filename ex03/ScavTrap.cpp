@@ -8,7 +8,7 @@ ScavTrap::ScavTrap(void): ClapTrap() {
 	setAttackDamage(20);
 }
 
-ScavTrap::ScavTrap(const std::string &param): ClapTrap() {
+ScavTrap::ScavTrap(const std::string &param): ClapTrap(param) {
 	setName(param);
 	setHitPoints(100);
 	setEnergyPoints(50);
@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(const std::string &param): ClapTrap() {
 	std::cout << "[INFO]: ScavTrap initiated (Basic)\n";
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other) {
+ScavTrap::ScavTrap(ScavTrap &other): ClapTrap(other) {
 	setName(other.getName());
 	setHitPoints(other.getHitPoints());
 	setEnergyPoints(other.getEnergyPoints());
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other) {
 	std::cout << "[INFO]: ScavTrap initiated (Copy Construction)\n";
 }
 
-ScavTrap	&ScavTrap::operator=(const ScavTrap &other) {
+ScavTrap	&ScavTrap::operator=(ScavTrap &other) {
 	setName(other.getName());
 	setHitPoints(other.getHitPoints());
 	setEnergyPoints(other.getEnergyPoints());
