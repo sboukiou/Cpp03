@@ -1,7 +1,7 @@
 CXX=c++
-CPPFLAGS=-Wall -Werror -Wextra -Wshadow=global -std=c++98
-NAME=FragTrap
-SRC=main.cpp ClapTrap.cpp FragTrap.cpp
+CPPFLAGS=-Wall -Werror -Wextra -Wshadow-all -std=c++98
+NAME=DiamondTrap
+SRC=main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 OBJ=$(SRC:%.cpp=%.o)
 
 

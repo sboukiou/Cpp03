@@ -61,7 +61,7 @@ FragTrap&	FragTrap::operator=(const FragTrap &other) {
 	return (*this);
 }
 
-void	FragTrap::highFivesGuys(void) {
+void	FragTrap::highFiveGuys(void) {
 	std::cout << "[FEAT]: Fragtrap ( " << getName() << ") requests a salut\n";
 	if (std::cout.fail()) {
 		std::cerr << "[ERR]: Failed to write!\n";
