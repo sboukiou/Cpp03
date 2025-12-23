@@ -4,7 +4,7 @@
 
 
 DiamondTrap::DiamondTrap(): ClapTrap("[Default](clapTrapDefault)") {
-	name = "[Default]";
+	DiamondTrap::name = "[Default]";
 	setHitPoints(FragTrap::getHitPoints());
 	setEnergyPoints(ScavTrap::getEnergyPoints());
 	setAttackDamage(FragTrap::getAttackDamage());
@@ -17,7 +17,7 @@ DiamondTrap::DiamondTrap(): ClapTrap("[Default](clapTrapDefault)") {
 
 
 DiamondTrap::DiamondTrap(const std::string& param): ClapTrap(param + "_ClapTrap") {
-	name = param;
+	DiamondTrap::name = param;
 	setHitPoints(FragTrap::getHitPoints());
 	setEnergyPoints(ScavTrap::getEnergyPoints());
 	setAttackDamage(FragTrap::getAttackDamage());
@@ -29,7 +29,7 @@ DiamondTrap::DiamondTrap(const std::string& param): ClapTrap(param + "_ClapTrap"
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& param): ClapTrap(param.getDiamondName() + ClapTrap::getName()) {
-	name = param.getDiamondName();
+	DiamondTrap::name = param.getDiamondName();
 	setHitPoints(FragTrap::getHitPoints());
 	setEnergyPoints(ScavTrap::getEnergyPoints());
 	setAttackDamage(FragTrap::getAttackDamage());
@@ -50,7 +50,7 @@ DiamondTrap::~DiamondTrap() {
 
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& param) {
 	ClapTrap::setName(param.getDiamondName() + ClapTrap::getName());
-	name = param.getDiamondName();
+	DiamondTrap::name = param.getDiamondName();
 	setHitPoints(FragTrap::getHitPoints());
 	setEnergyPoints(ScavTrap::getEnergyPoints());
 	setAttackDamage(FragTrap::getAttackDamage());
@@ -67,7 +67,7 @@ void	DiamondTrap::attack(const std::string& target) {
 }
 
 void	DiamondTrap::whoAmI(void) {
-		std::cout << "[FEAT]: Diamond Name: " << name << "\n";
+		std::cout << "[FEAT]: Diamond Name: " << DiamondTrap::name << "\n";
 		std::cout << "[FEAT]: ClapTrap Name: " << ClapTrap::getName() << "\n";
 		if (std::cout.fail()) {
 			std::cerr << "Failed to write!\n";
@@ -76,8 +76,8 @@ void	DiamondTrap::whoAmI(void) {
 }
 
 const std::string	DiamondTrap::getDiamondName(void) const {
-	return (name);
+	return (DiamondTrap::name);
 }
 void	DiamondTrap::setDiamondName(const std::string &param) {
-	name = param;
+	DiamondTrap::name = param;
 }
